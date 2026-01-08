@@ -97,8 +97,8 @@ eleve.push(eleve4) ; //ajoute à la liste d'élève Alexis
 console.log("Il y a ", eleve.length ,"élèves dans la classe.") ;
 
 //
-eleve_admis=0 ;
-eleve_restant=eleve.length ; //récupère le nombre d'élève pas encore noté
+eleve_admis = 0 ;
+eleve_restant = eleve.length ; //récupère le nombre d'élève pas encore noté
 while (eleve_restant!=0) {
     if (((eleve[eleve_restant-1].note_français+eleve[eleve_restant-1].note_maths)/2)>=10) { //vérifie la moyenne du dernier élève de la liste
         eleve_admis += 1  ; //s'il a la moyenne, il est admis
