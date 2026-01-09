@@ -31,10 +31,10 @@ for (let i = 0; i<notes.length; i++) {
 }
 console.log("La valeur la plus petite du tableau est ",valeur_min) ;
 
-let valeur_max = -Infinity ;
-for (let i = 0; i<notes.length; i++) {
-    if (valeur_max <notes[i] ) {
-        valeur_max = notes[i];
+let valeur_max = -Infinity ; 
+for (let i = 0; i<notes.length; i++) { //check toute les valeurs afin de trouver la valeur max
+    if (valeur_max <notes[i] ) { //si l'ancienne valeur max est plus petite que la nouvelle valeur
+        valeur_max = notes[i]; //on affecte a valeur max la nouvelle valeur
     }
 }
 console.log("La valeur la plus grande du tableau est ", valeur_max) ;
