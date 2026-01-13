@@ -15,7 +15,7 @@ class Player {
         this.cooldown_max = 1;
         this.hp_max = 20;
 
-        this.isattacking = true;
+        this.isattacking = false;
         this.iswalking = false;
         this.isdying = false;
 
@@ -91,26 +91,36 @@ class Player {
         else {
             this.WalkSpriteIndex = 0
         }
-
-    // console.log("Walk Animation : \n");
-    // console.log("isWalking = ", this.iswalking);
-    // console.log("walkSpriteIndex = ",this.WalkSpriteIndex);
-    // console.log("this.currentWalkSpriteStep = ",this.currentWalkSpriteStep)
+        if (this.iswalking) {
+        console.log("Walk Animation : \n");
+        console.log("isWalking = ", this.iswalking);
+        console.log("walkSpriteIndex = ",this.WalkSpriteIndex);
+        console.log("this.currentWalkSpriteStep = ",this.currentWalkSpriteStep)
+    }
         if (this.isattacking) {
             console.log("attack Animation : \n");
             console.log("isattacking = ", this.isattacking);
             console.log("attackSpriteIndex = ",this.AttackSpriteIndex);
             console.log("this.currentattackSpriteStep = ",this.currentAttackSpriteStep)
             }
-    // if (this.isdying) {
-    //     console.log("Dying Animation : \n");
-    //     console.log("isDying = ", this.isdying);
-    //     console.log("DyingSpriteIndex = ",this.DyingSpriteIndex);
-    //     console.log("this.currentdyingSpriteStep = ",this.currentDyingSpriteStep)
-    //     }
+    if (this.isdying) {
+        console.log("Dying Animation : \n");
+        console.log("isDying = ", this.isdying);
+        console.log("DyingSpriteIndex = ",this.DyingSpriteIndex);
+        console.log("this.currentdyingSpriteStep = ",this.currentDyingSpriteStep)
+        }
     }
 }
+    
+    // Définit la durée de l'action
+    tempsRestantAction = Math.floor(Math.random() * 5) + 4;
+
 const Player1 = new Player("Totor99","skin",[0,0]);
+
+const choix = Math.floor(Math.random() * 3); 
+    if (choix === 0) Player1.iswalking = true;
+    else if (choix === 1) Player1.isattacking = true;
+    else if (choix === 2) Player1.isdying = true;
 for (let i =0; i<20; i++) {
     Player1.animate();
 }
