@@ -50,6 +50,7 @@ class Player {
         this.iswalking = updateData.iswalking;
         this.isattacking = updateData.isattacking;
         this.isdying = updateData.isdying
+        console.log(Player1.positionX);
     }
     animate() {
         if (this.isdying) {
@@ -61,6 +62,7 @@ class Player {
             if (this.DyingSpriteIndex >= this.DyingSpriteNumber) {
                 console.log("Vous êtes mort")
                 this.isdying = false;
+                this.alive = false;
             }
         }
         
@@ -118,9 +120,9 @@ class Player {
 const Player1 = new Player("Totor99","skin",[0,0]);
 
 const choix = Math.floor(Math.random() * 3); 
-    if (choix === 0) Player1.iswalking = true;
-    else if (choix === 1) Player1.isattacking = true;
-    else if (choix === 2) Player1.isdying = true;
+if (choix === 0) Player1.iswalking = true;
+else if (choix === 1) Player1.isattacking = true;
+else if (choix === 2) Player1.isdying = true;
 for (let i =0; i<20; i++) {
     Player1.animate();
 }
