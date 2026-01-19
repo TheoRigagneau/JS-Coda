@@ -98,7 +98,7 @@ class Player {
     //     console.log("isWalking = ", this.iswalking);
     //     console.log("walkSpriteIndex = ",this.WalkSpriteIndex);
     //     console.log("this.currentWalkSpriteStep = ",this.currentWalkSpriteStep)
-    // }
+    //}
     //     if (this.isattacking) {
     //         console.log("attack Animation : \n");
     //         console.log("isattacking = ", this.isattacking);
