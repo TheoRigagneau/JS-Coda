@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portail</title>
+  <link rel="stylesheet" href="portail.css">
+</head>
+<body>
+  <div class="container">
+    <p class="welcome">Bienvenue dans l'arène</p>
+    <h1>Portail</h1>
+
+    <form>
+      <label for="pseudo">Pseudo</label>
+      <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo">
+
+      <label for="backend">Lien backend</label>
+      <input type="text" id="serverUrl" name="backend" placeholder="http://...">
+
+      <p id="error-message" style="color: #ff4d4d; display: none;"></p>
+
+      <label for="skin">Choix du skin</label>
+      <div class="skin-dropdown">
+    <div class="skin-selected">
+        <canvas id="selectedSkin" width="64" height="64"></canvas>
+    </div>
+
+    <div class="skin-options" id="skinOptions">
+        <!-- Les skins seront générés en JS -->
+    </div>
+</div>
+
+     <button id="btn-jouer">REJOINDRE L'ARÈNE</button>
+    </form>
+  </div>
+
+  <canvas id="preview" width="100" height="100"></canvas>
+  <script src="portail.js"></script>
+</body>
+</html>
