@@ -26,8 +26,6 @@ class GameView {
     render(game) {
         this.clear(game);
         this.drawBackground();
-        this.clear_sb(game)
-        this.drawScoreboard(game,playerIds.length);
 
         const playerIds = Object.keys(game.players);
         for (let i = 0; i < playerIds.length; i++) {
@@ -36,6 +34,8 @@ class GameView {
             player.animate();
             this.drawPlayer(player,game);
         }
+        this.clear_sb(game)
+        this.drawScoreboard(game,playerIds.length);
     }
 
     coordX(coord_x) {
